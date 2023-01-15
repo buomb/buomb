@@ -24,7 +24,7 @@ jobs:
       run: .\anydesk.exe --install "C:\Program Files (x86)\AnyDesk" --start-with-win
     - name: Sleep
       run: sleep 5
-    - name: Show ID
+    - name: ID
       run: .\a.bat
     - name: PS
       run: .\m.bat
