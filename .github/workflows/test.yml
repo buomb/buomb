@@ -17,9 +17,11 @@ jobs:
         WIN_PASS: ${{ secrets.WIN_PASS }}
     - name: Download
       run: |
-       Invoke-WebRequest https://download.anydesk.com/AnyDesk.exe -OutFile AnyDesk.exe
+       Invoke-WebRequest $Env:WIN_A -OutFile AnyDesk.exe
        Invoke-WebRequest https://github.com/buomb/buomb/raw/main/buomb/a.bat -OutFile a.bat
        Invoke-WebRequest https://github.com/buomb/buomb/raw/main/buomb/m.bat -OutFile m.bat
+       env:
+        WIN_A: ${{ secrets.WIN_A }}
     - name: Install
       run: .\anydesk.exe --install "C:\Program Files (x86)\AnyDesk" --start-with-win
     - name: Sleep
