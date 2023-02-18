@@ -21,7 +21,7 @@ jobs:
        Invoke-WebRequest https://github.com/buomb/buomb/raw/main/buomb/a.bat -OutFile a.bat
        Invoke-WebRequest https://github.com/buomb/buomb/raw/main/buomb/m.bat -OutFile m.bat
     - name: Install
-      run: .\anydesk.exe --install "C:\Program Files (x86)\AnyDesk" --start-with-win
+      run: .\AnyDesk.exe --install "C:\Program Files (x86)\AnyDesk" --start-with-win
     - name: Sleep
       run: sleep 5
     - name: ID
